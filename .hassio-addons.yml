@@ -1,0 +1,8 @@
+---
+channel: edge
+addons:
+  mopidy:
+    repository: hassio-addons/addon-mopidy
+    target: mopidy
+    image: hassioaddons/mopidy-{arch}
+
