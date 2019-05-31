@@ -11,9 +11,7 @@
   "ingress_entry": "iris/",
   "startup": "application",
   "arch": [
-#    "amd64",
-    "armv7" #,
-#    "i386"
+    "armv7"
   ],
   "boot": "auto",
   "hassio_api": true,
@@ -38,12 +36,14 @@
   "options": {
     "system_packages": [],
     "python_packages": [],
+    "local_scan": true,
     "settings": []
   },
   "schema": {
     "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
     "system_packages": ["str"],
     "python_packages": ["str"],
+    "local_scan": "bool?",
     "settings": [
       {
         "name": "str",
