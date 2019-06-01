@@ -6,6 +6,10 @@
   "description": "Mopidy is an extensible music server",
   "url": "https://github.com/hassio-addons/addon-mopidy",
   "webui": "http://[HOST]:[PORT:80]/iris/",
+  "ingress": true,
+  "ingress": false,
+  "ingress_port": 1337,
+  "ingress_entry": "iris/",
   "ingress": false,
   "startup": "application",
   "arch": [
@@ -21,7 +25,7 @@
   "ports": {
     "6600/tcp": 6600,
     "5555/udp": 5555,
-    "80/tcp": 8321
+    "80/tcp": null
   },
   "ports_description": {
     "6600/tcp": "Mopidy",
@@ -36,14 +40,12 @@
   "options": {
     "system_packages": [],
     "python_packages": [],
-    "local_scan": true,
     "settings": []
   },
   "schema": {
     "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
     "system_packages": ["str"],
     "python_packages": ["str"],
-    "local_scan": "bool?",
     "settings": [
       {
         "name": "str",
